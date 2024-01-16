@@ -1,4 +1,4 @@
-<?php //a small but simple function to help us navigate files without having to worry about the path type
+<?php
 function get_url($dest)
 {
     global $BASE_PATH;

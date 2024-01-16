@@ -1,4 +1,4 @@
-<?php
+<?php 
 /** Safe Echo Function
  * Takes in a value and passes it through htmlspecialchars()
  * or
@@ -12,8 +12,8 @@ function se($v, $k = null, $default = "", $isEcho = true) {
         $returnValue = $v->$k;
     } else {
         $returnValue = $v;
-        //added to fix case where $k of $v isn't set
-        //this is to kep htmlspecialchars happy - don't worry about it too much
+        //added 07-05-2021 to fix case where $k of $v isn't set
+        //this is to kep htmlspecialchars happy
         if (is_array($returnValue) || is_object($returnValue)) {
             $returnValue = $default;
         }

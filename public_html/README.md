@@ -1,3 +1,0 @@
-### Public_html is the folder where all of the code that users will be able to directly see will go. This is where the majority of our website will live.
-#### Notice that our "team_members" folder is also included inside this directory, even though it's not really "public".
-#### This is because our backend still needs to be accessible to our users, so it needs to go in the public-facing side of the server. We can manage access to it with authentication methods.
