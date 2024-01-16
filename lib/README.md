@@ -1,0 +1,1 @@
+### Lib is where we keep what are called "Library Files". These contain code that we want to use, but don't want to be accessible in the browser. PHP can still fetch them from the server via include & require commands.
