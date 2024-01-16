@@ -1,5 +1,4 @@
-<?php //uses the variables we set in config.php to establish a connection to the database
-//this is a common pattern to abstract database connections away from the rest of the code
+<?php
 //for this we'll turn on error output so we can try to see any problems on the screen
 //this will be active for any script that includes/requires this one
 ini_set('display_errors', 1);
