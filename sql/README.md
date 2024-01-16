@@ -1,0 +1,5 @@
+### This is where all of our SQL files will go, which is how we will manage our database for the back end. (Note that this doesn't mean explicitly inputting data, it is how we build the Tables of the database itself so that we CAN input data).
+
+### I've built init_db.php for you to manage uploading your SQL commands to the server where the database lives in my office. In the real world, you wouldn't really keep SQL files laying around in your project like this and would just run the commands one by one directly into the database; but I think doing it this way makes it eaiser to learn since you can go back and refer to commands you've run before, and being able to split it up into multiple lines instead of one long one makes it eaiser to read and understand.
+
+### Read (but do not edit) init_db.php and the .sql files I've already created for you for more information.
