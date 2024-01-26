@@ -5,7 +5,7 @@ if (!has_role("Admin")) {
     flash("You don't have permission to view this page", "warning");
     die(header("Location: $BASE_PATH" . "/dashboard.php"));
 }
-//attempt to apply
+//attempt to apply changes to UserRoles table
 if (isset($_POST["users"]) && isset($_POST["roles"])) {
     $user_ids = $_POST["users"]; //se() doesn't like arrays so we'll just do this
     $role_ids = $_POST["roles"]; //se() doesn't like arrays so we'll just do this
@@ -32,7 +32,7 @@ if (isset($_POST["users"]) && isset($_POST["roles"])) {
 //get active roles
 $active_roles = [];
 $db = getDB();
-$stmt = $db->prepare("SELECT id, name, description FROM Roles WHERE is_active = 1 LIMIT 10");
+$stmt = $db->prepare("SELECT id, name, description FROM Roles WHERE is_active = 1 ORDER BY name ASC");
 try {
     $stmt->execute();
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);

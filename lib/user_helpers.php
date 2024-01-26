@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Passing $redirect as true will auto redirect a logged out user to the $destination.
  * The destination defaults to login.php
@@ -8,7 +7,7 @@ function is_logged_in($redirect = false, $destination = "login.php")
 {
     $isLoggedIn = isset($_SESSION["user"]);
     if ($redirect && !$isLoggedIn) {
-        //if this triggers, the calling script won't receive a reply since die()/exit() terminates it
+        //if this triggers, the calling script won't receive a reply since die() terminates it
         flash("You must be logged in to view this page", "warning");
         die(header("Location: $destination"));
     }
@@ -32,7 +31,6 @@ function get_username()
     }
     return "";
 }
-
 function get_user_id()
 {
     if (is_logged_in()) { //we need to check for login first because "user" key may not exist
@@ -40,7 +38,6 @@ function get_user_id()
     }
     return false;
 }
-
 function find_user_by_id($user_id)
 {
     $user_id = (int)($user_id);
@@ -71,10 +68,9 @@ function fetch_all_users(){
         flash("An unexpected error occurred, please try again later. If the issue persists, please contact the administrator", "danger");
     }
 }
-
 function users_check_duplicate($errorInfo)
 {
-    if ($errorInfo[1] === 1062) {
+    if ($errorInfo[1] === 1062) { //checking for SQL error codes. 1062 is for duplicate entry
         //https://www.php.net/manual/en/function.preg-match.php
         preg_match("/Users.(\w+)/", $errorInfo[2], $matches);
         if (isset($matches[1])) {
