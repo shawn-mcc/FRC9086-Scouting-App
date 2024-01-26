@@ -37,6 +37,7 @@ session_start();
 <!-- include our js helper files -->
 <script src="<?php echo get_url('/js/user_helpers.js'); ?>"></script>
 <script src="<?php echo get_url('/js/flash_helper.js'); ?>"></script>
+<script src="<?php echo get_url('/js/validations.js'); ?>"></script>
 
 <!-- our Navbar -->
 <nav class="navbar navbar-expand-lg">
@@ -51,7 +52,7 @@ session_start();
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <?php if (is_logged_in()) : ?>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('dashboard.php'); ?>">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="<?php echo get_url('profile.php'); ?>">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo get_url('my_profile.php'); ?>">Profile</a></li>
                 <?php endif; ?>
                 <?php if (!is_logged_in()) : ?>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('login.php'); ?>">Login</a></li>
@@ -63,9 +64,9 @@ session_start();
                             Admin Tools
                         </a>
                         <ul class="dropdown-menu bg-warning" aria-labelledby="rolesDropdown">
-                            <li><a class="dropdown-item" href="<?php echo get_url('admin/create_role.php'); ?>">Create Roles</a></li>
-                            <li><a class="dropdown-item" href="<?php echo get_url('admin/assign_roles.php'); ?>">Assign Roles</a></li>
-                            <li><a class="dropdown-item" href="<?php echo get_url('admin/list_roles.php'); ?>">View Roles</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/create_role.php'); ?>">Create New Roles</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/assign_roles.php'); ?>">Assign Users to Roles</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/manage_roles.php'); ?>">Manage Roles</a></li>
                         </ul>
                     </li>
                     <?php endif; ?>
