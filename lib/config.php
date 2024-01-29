@@ -11,7 +11,6 @@ else{
     //load from env variables
     $url = getenv("DB_URL");
     $db_url = parse_url($url);
-    
 }
 //attempts to handle a failure where parse_url doesn't parse properly (usually happens when special characters are included)
 if (!$db_url || count($db_url) === 0) {
