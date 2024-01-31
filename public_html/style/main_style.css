@@ -9,7 +9,7 @@ Then we simply call the CSS file in every page we want to use it in.
 :root { 
     --egyptian-blue: #003195;
     --white: #FFFFFF;
-    --orange-yellow: #F4C016;
+    --orange-yellow: #FFC20F;
     --green-blue-crayola: #058ED9;
     --steel-teal: #6E8387;
 }
@@ -17,7 +17,7 @@ Then we simply call the CSS file in every page we want to use it in.
 /* Nav */
 .navbar,
 .navitem.dropdown {
-    background-color: var(--egyptian-blue);
+    background-color: black;
     border-color: var(--steel-teal);
 
 }
