@@ -55,7 +55,7 @@ session_start();
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('my_profile.php'); ?>">Profile</a></li>
                 <?php endif; ?>
                 <?php if (!is_logged_in()) : ?>
-                    <li class="nav-item"><a class="nav-link" href="<?php echo get_url('index.php'); ?>">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo get_url('../index.php'); ?>">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('login.php'); ?>">Donate</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('login.php'); ?>">Calander</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('login.php'); ?>">Gallery</a></li>
