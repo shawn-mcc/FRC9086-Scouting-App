@@ -54,7 +54,7 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
     if (!is_valid_username($username)) {
         flash("Invalid username");
         $hasError = true;
-        }
+    }
     // Check if password is empty. No need to show password rules on login page.
     if (empty($password)) {
         flash("password must not be empty");
