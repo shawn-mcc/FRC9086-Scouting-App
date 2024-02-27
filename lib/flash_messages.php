@@ -10,7 +10,6 @@ function flash($msg = "", $color = "info")
         array_push($_SESSION['flash'], $message);
     }
 }
-
 function getMessages()
 {
     if (isset($_SESSION['flash'])) {
